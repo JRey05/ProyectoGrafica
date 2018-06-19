@@ -113,6 +113,38 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &87285698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87285699}
+  m_Layer: 0
+  m_Name: Neumaticos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &87285699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 87285698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1760065671}
+  - {fileID: 1339300457}
+  - {fileID: 1679745585}
+  - {fileID: 1899141555}
+  m_Father: {fileID: 2070069535}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &155106400
 Prefab:
   m_ObjectHideFlags: 0
@@ -168,7 +200,7 @@ GameObject:
   - component: {fileID: 659358257}
   - component: {fileID: 659358259}
   m_Layer: 0
-  m_Name: Wheel_Rear.R
+  m_Name: Llanta3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -181,12 +213,12 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 659358255}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9533503, y: 0.38599536, z: -1.378053}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9533539, y: 0.3859949, z: -1.3780518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2070069535}
-  m_RootOrder: 1
+  m_Father: {fileID: 1339300457}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &659358257
 MeshRenderer:
@@ -241,25 +273,25 @@ WheelCollider:
   m_Center: {x: 0, y: 0, z: 0}
   m_Radius: 0.4
   m_SuspensionSpring:
-    spring: 350000
+    spring: 35000
     damper: 4500
     targetPosition: 0.5
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.3
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 0.5
+    m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 5
   m_Enabled: 1
 --- !u!1 &789026024
 GameObject:
@@ -274,7 +306,7 @@ GameObject:
   - component: {fileID: 789026026}
   - component: {fileID: 789026028}
   m_Layer: 0
-  m_Name: llantaD
+  m_Name: Llanta2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,20 +384,20 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 0.5
+    m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 5
   m_Enabled: 1
 --- !u!1 &869619414 stripped
 GameObject:
@@ -484,7 +516,7 @@ GameObject:
   - component: {fileID: 1115746828}
   - component: {fileID: 1115746830}
   m_Layer: 0
-  m_Name: llantaI
+  m_Name: Llanta1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,20 +594,20 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 0.5
+    m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.4
+    m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 5
   m_Enabled: 1
 --- !u!1 &1189537326
 GameObject:
@@ -588,7 +620,7 @@ GameObject:
   - component: {fileID: 1189537330}
   - component: {fileID: 1189537329}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Box Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -605,7 +637,7 @@ Transform:
   m_LocalScale: {x: 2.746898, y: 1.1969541, z: 5.148397}
   m_Children: []
   m_Father: {fileID: 2070069535}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1189537329
 BoxCollider:
@@ -626,6 +658,35 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1189537326}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1339300456
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1339300457}
+  m_Layer: 0
+  m_Name: Neumatico3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1339300457
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1339300456}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 659358256}
+  m_Father: {fileID: 87285699}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441705502
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,7 +798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679745585}
   m_Layer: 0
-  m_Name: neumatico2
+  m_Name: Neumatico2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -749,13 +810,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1679745584}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.93353295, y: 0.38599634, z: 1.7006226}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.9335327, y: 0.38599586, z: 1.7006226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 789026025}
-  m_Father: {fileID: 2070069535}
-  m_RootOrder: 4
+  m_Father: {fileID: 87285699}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1699961448
 GameObject:
@@ -823,6 +884,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1760065670
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1760065671}
+  m_Layer: 0
+  m_Name: Neumatico4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1760065671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1760065670}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2045223651}
+  m_Father: {fileID: 87285699}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1899141554
 GameObject:
   m_ObjectHideFlags: 0
@@ -832,7 +922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899141555}
   m_Layer: 0
-  m_Name: neumatico1
+  m_Name: Neumatico1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,12 +934,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1899141554}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.9335327, y: 0.38599634, z: 1.7006228}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9335327, y: 0.38599586, z: 1.7006226}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1115746827}
-  m_Father: {fileID: 2070069535}
+  m_Father: {fileID: 87285699}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2045223650
@@ -865,7 +955,7 @@ GameObject:
   - component: {fileID: 2045223652}
   - component: {fileID: 2045223654}
   m_Layer: 0
-  m_Name: Wheel_Rear.L
+  m_Name: Llanta4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -878,11 +968,11 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2045223650}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.9533503, y: 0.38599536, z: -1.378053}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.9533539, y: 0.3859949, z: -1.3780518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2070069535}
+  m_Father: {fileID: 1760065671}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &2045223652
@@ -943,20 +1033,20 @@ WheelCollider:
     targetPosition: 0.5
   m_SuspensionDistance: 0
   m_ForceAppPointDistance: 0
-  m_Mass: 20
+  m_Mass: 10
   m_WheelDampingRate: 0.25
   m_ForwardFriction:
-    m_ExtremumSlip: 0.4
-    m_ExtremumValue: 1
+    m_ExtremumSlip: 0.5
+    m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 1
+    m_Stiffness: 5
   m_SidewaysFriction:
-    m_ExtremumSlip: 0.2
+    m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
-    m_AsymptoteValue: 0.75
-    m_Stiffness: 1
+    m_AsymptoteValue: 0.6
+    m_Stiffness: 5
   m_Enabled: 1
 --- !u!1 &2070069531
 GameObject:
@@ -973,7 +1063,7 @@ GameObject:
   - component: {fileID: 2070069536}
   - component: {fileID: 2070069537}
   m_Layer: 0
-  m_Name: Interceptor
+  m_Name: PoliceCar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1053,11 +1143,8 @@ Transform:
   m_LocalPosition: {x: 250, y: 10, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2045223651}
-  - {fileID: 659358256}
   - {fileID: 1189537327}
-  - {fileID: 1899141555}
-  - {fileID: 1679745585}
+  - {fileID: 87285699}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1068,7 +1155,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070069531}
   serializedVersion: 2
-  m_Mass: 100
+  m_Mass: 200
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -1087,9 +1174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90d9787cd9587419d944f07058465235, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  llantaI: {fileID: 1115746830}
-  llantaD: {fileID: 789026028}
-  neumatico1: {fileID: 1899141555}
-  neumatico2: {fileID: 1679745585}
-  desAceleracion: 80
-  velocidad: 100
+  Llanta1: {fileID: 1115746830}
+  Llanta2: {fileID: 789026028}
+  Neumatico1: {fileID: 1115746827}
+  Neumatico2: {fileID: 789026025}
+  Neumatico3: {fileID: 659358256}
+  Neumatico4: {fileID: 2045223651}
+  desaceleracion: 150
+  velocidad: 0
+  aceleracion: 300

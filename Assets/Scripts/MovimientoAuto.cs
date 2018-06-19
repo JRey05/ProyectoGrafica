@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class MovimientoAuto : MonoBehaviour {
 
-	public WheelCollider llantaI;
-	public WheelCollider llantaD;
-	public Transform neumatico1;
-	public Transform neumatico2; 
-	public int desaceleracion = 80;
-	private int velocidadMaxima = 100;
+	public WheelCollider Llanta1;
+	public WheelCollider Llanta2;
+	public Transform Neumatico1;
+	public Transform Neumatico2; 
+	public Transform Neumatico3; 
+	public Transform Neumatico4; 
+	public int desaceleracion = 150;
+	private int velocidadMaxima = 150;
 
 
 	public double velocidad;
-	public int aceleracion = 100;
+	public int aceleracion = 300;
 
 
 	// Solo se ejecuta cuando se inicia
 	void Start () {
-		//transform.rigidbody.centerOfMass = new Vector3(0,-1f,0);
+		transform.GetComponent<Rigidbody>().centerOfMass = new Vector3(0,-0.5f,0);	// se pone el centro de masa en el -1 de y para que no se voltee
 	}
 
 	void Update(){
-		neumatico1.localEulerAngles = new Vector3 (0, llantaI.steerAngle, 0);
-		neumatico2.localEulerAngles = new Vector3 (0, llantaD.steerAngle, 0);
-		velocidad= (2* 3.1416 * llantaD.radius) * (llantaD.rpm * 60/1000);			// perimetro * rpm * conversion a km/h
+		//movimiento de las llantas hacia los costados
+		Neumatico1.localEulerAngles = new Vector3 (0, Llanta1.steerAngle, 0);
+		Neumatico2.localEulerAngles = new Vector3 (0, Llanta2.steerAngle, 0);
+		//rotacion de las llantas
+		Neumatico1.Rotate(new Vector3(Llanta1.rpm/60*360*Time.deltaTime/4,0,0));
+		Neumatico2.Rotate(new Vector3(Llanta1.rpm/60*360*Time.deltaTime/4,0,0));
+		Neumatico3.Rotate(new Vector3(Llanta1.rpm/60*360*Time.deltaTime/4,0,0));
+		Neumatico4.Rotate(new Vector3(Llanta1.rpm/60*360*Time.deltaTime/4,0,0));
+		velocidad= (2* 3.1416 * Llanta1.radius) * (Llanta1.rpm * 60/1000);			// perimetro * rpm * conversion a km/h de m/min
 	}
 	
 	// Se ejecuta varias veces por segundo
@@ -33,31 +41,31 @@ public class MovimientoAuto : MonoBehaviour {
 		//Aceleracion del auto
 		if (velocidad <= velocidadMaxima){
 			//Aceleracion del auto
-			llantaI.motorTorque= aceleracion * Input.GetAxis("Vertical");
-			llantaD.motorTorque= aceleracion * Input.GetAxis("Vertical");
+			Llanta1.motorTorque= aceleracion * Input.GetAxis("Vertical");
+			Llanta2.motorTorque= aceleracion * Input.GetAxis("Vertical");
 		}
 		else {
-			llantaI.motorTorque= 0;
-			llantaD.motorTorque= 0;
+			Llanta1.motorTorque= 0;
+			Llanta2.motorTorque= 0;
 		}
 
 		
 
 		//Rotacion del auto
-		llantaI.steerAngle = 7 * Input.GetAxis("Horizontal");
-		llantaD.steerAngle = 7 * Input.GetAxis("Horizontal");
+		Llanta1.steerAngle = 7 * Input.GetAxis("Horizontal");
+		Llanta2.steerAngle = 7 * Input.GetAxis("Horizontal");
 
 		//Desaceleracion
 		if (Input.GetAxis("Vertical")==0) {
 
-			llantaI.brakeTorque=desaceleracion;
-			llantaD.brakeTorque=desaceleracion;
+			Llanta1.brakeTorque=desaceleracion;
+			Llanta2.brakeTorque=desaceleracion;
 		}
 
 		else {
 
-			llantaI.brakeTorque=0;
-			llantaD.brakeTorque=0;
+			Llanta1.brakeTorque=0;
+			Llanta2.brakeTorque=0;
 		}
 	}
 }
