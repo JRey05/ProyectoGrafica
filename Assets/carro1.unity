@@ -145,48 +145,6 @@ Transform:
   m_Father: {fileID: 2070069535}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &155106400
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 260
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 260
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4720511754970720, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 5176dea5d2e6944bc813b916e5377837, type: 2}
-  m_IsPrefabAsset: 0
 --- !u!1 &659358255
 GameObject:
   m_ObjectHideFlags: 0
@@ -285,13 +243,13 @@ WheelCollider:
     m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_SidewaysFriction:
     m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.6
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &789026024
 GameObject:
@@ -391,46 +349,14 @@ WheelCollider:
     m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_SidewaysFriction:
     m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.6
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
---- !u!1 &869619414 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1893225666883064, guid: 5176dea5d2e6944bc813b916e5377837,
-    type: 2}
-  m_PrefabInternal: {fileID: 155106400}
---- !u!54 &869619419
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 869619414}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!65 &869619420
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 869619414}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1526415, y: 14.742584, z: 1.9731559}
-  m_Center: {x: -0.07857996, y: 7.371292, z: -0.31401843}
 --- !u!1 &990638231
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +393,7 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 3
   m_TerrainData: {fileID: 15600000, guid: 6454ea2153e1f448fb443cecf55d6258, type: 2}
-  m_TreeDistance: 5000
+  m_TreeDistance: 2000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
@@ -480,10 +406,10 @@ Terrain:
   m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
+  m_MaterialType: 2
   m_LegacySpecular:
     serializedVersion: 2
-    rgba: 4286545791
+    rgba: 4278594903
   m_LegacyShininess: 0.078125
   m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
@@ -501,7 +427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1115746826
 GameObject:
@@ -601,13 +527,13 @@ WheelCollider:
     m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_SidewaysFriction:
     m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.6
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &1189537326
 GameObject:
@@ -767,11 +693,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1441705502}
   m_LocalRotation: {x: 0.078794, y: 0.66197854, z: -0.20118055, w: 0.7177063}
-  m_LocalPosition: {x: 244.22, y: 12.450002, z: 249.87}
+  m_LocalPosition: {x: 244.22, y: 55, z: 249.87}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 22.3, y: -6.9, z: -11.5}
 --- !u!114 &1441705507
 MonoBehaviour:
@@ -877,13 +803,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1699961448}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.5763933, y: 0.6046695, z: 0.079873994, w: 0.54384345}
+  m_LocalPosition: {x: -600, y: 200, z: 700}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 32.029003, y: 117.824005, z: 67.621}
 --- !u!1 &1760065670
 GameObject:
   m_ObjectHideFlags: 0
@@ -1040,13 +966,13 @@ WheelCollider:
     m_ExtremumValue: 0.7
     m_AsymptoteSlip: 0.8
     m_AsymptoteValue: 0.5
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_SidewaysFriction:
     m_ExtremumSlip: 0.5
     m_ExtremumValue: 1
     m_AsymptoteSlip: 0.5
     m_AsymptoteValue: 0.6
-    m_Stiffness: 5
+    m_Stiffness: 2
   m_Enabled: 1
 --- !u!1 &2070069531
 GameObject:
@@ -1140,13 +1066,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070069531}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 250, y: 10, z: 250}
+  m_LocalPosition: {x: 100, y: 50, z: 250}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1189537327}
   - {fileID: 87285699}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &2070069536
 Rigidbody:
@@ -1155,7 +1081,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2070069531}
   serializedVersion: 2
-  m_Mass: 200
+  m_Mass: 250
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
